@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./ForgotPassword.css";
+import "./Auth.css";
 
 function ForgotPassword({ goToLogin }) {
 
@@ -15,15 +15,17 @@ function ForgotPassword({ goToLogin }) {
     }
 
     setError("");
-    alert("Link đặt lại mật khẩu đã được gửi đến email!");
+    alert("Link đặt lại mật khẩu đã được gửi!");
   };
 
   return (
-    <div className="forgot-page">
-      <div className="forgot-box">
+    <div className="auth-page">
+      <div className="auth-box">
+
         <h2>Quên mật khẩu</h2>
 
         <form onSubmit={handleSubmit}>
+
           <div className="input-group">
             <label>Email</label>
             <input
@@ -37,11 +39,13 @@ function ForgotPassword({ goToLogin }) {
           </div>
 
           <button type="submit">Gửi yêu cầu</button>
+
         </form>
 
-        <p className="back-login">
+        <p className="switch">
           <span onClick={goToLogin}>← Quay lại đăng nhập</span>
         </p>
+
       </div>
     </div>
   );

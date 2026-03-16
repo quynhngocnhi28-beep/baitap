@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Register.css";
+import "./Auth.css";
 
 function Register({ goToLogin }) {
 
@@ -14,17 +14,9 @@ function Register({ goToLogin }) {
 
     let newErrors = {};
 
-    if (!username) {
-      newErrors.username = "Vui lòng nhập tên đăng nhập";
-    }
-
-    if (!email) {
-      newErrors.email = "Vui lòng nhập email";
-    }
-
-    if (!password) {
-      newErrors.password = "Vui lòng nhập mật khẩu";
-    }
+    if (!username) newErrors.username = "Vui lòng nhập tên đăng nhập";
+    if (!email) newErrors.email = "Vui lòng nhập email";
+    if (!password) newErrors.password = "Vui lòng nhập mật khẩu";
 
     setErrors(newErrors);
 
@@ -35,11 +27,13 @@ function Register({ goToLogin }) {
   };
 
   return (
-    <div className="register-page">
-      <div className="register-box">
+    <div className="auth-page">
+      <div className="auth-box">
+
         <h2>Đăng ký</h2>
 
         <form onSubmit={handleSubmit}>
+
           <div className="input-group">
             <label>Tên đăng nhập</label>
             <input
@@ -74,11 +68,14 @@ function Register({ goToLogin }) {
           </div>
 
           <button type="submit">Đăng ký</button>
+
         </form>
 
         <p className="switch">
-          Đã có tài khoản <span onClick={goToLogin}>Đăng nhập</span>
+          Đã có tài khoản{" "}
+          <span onClick={goToLogin}>Đăng nhập</span>
         </p>
+
       </div>
     </div>
   );

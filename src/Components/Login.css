@@ -1,4 +1,4 @@
-.login-page {
+.auth-page {
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -7,17 +7,13 @@
   font-family: Arial, sans-serif;
 }
 
-.login-box {
+.auth-box {
   background: white;
   padding: 40px;
   width: 320px;
   border-radius: 10px;
   text-align: center;
   box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-}
-
-.login-box h2 {
-  color: #665020;
 }
 
 .input-group {

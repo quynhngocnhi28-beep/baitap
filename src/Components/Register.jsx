@@ -66,7 +66,7 @@ function Register({ goToLogin }) {
             <label>Mật khẩu</label>
             <input
               type="password"
-              placeholder="Nhập password"
+              placeholder="Nhập mật khẩu"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />

@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import "./Login.css";
 
 function Login({ goToRegister, goToForgot }) {
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
   const [errors, setErrors] = useState({});
 
   const handleSubmit = (e) => {

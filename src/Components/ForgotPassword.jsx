@@ -32,6 +32,7 @@ function ForgotPassword({ goToLogin }) {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
+
             {error && <p className="error">{error}</p>}
           </div>
 

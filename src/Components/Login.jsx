@@ -19,12 +19,11 @@ function Login() {
   return (
     <div className="login-page">
       <div className="login-box">
-        <h2>Quản Lý Bán Hàng</h2>
-        <p>Siêu Thị Mini</p>
+        <h2>Đăng nhập</h2>
 
         <form onSubmit={handleSubmit}>
           <div className="input-group">
-            <label>Tên đăng nhập</label>
+            <label>Email</label>
             <input
               type="text"
               placeholder="Nhập username"

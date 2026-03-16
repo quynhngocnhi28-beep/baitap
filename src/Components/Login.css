@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(120deg, #4caf50, #8bc34a);
+  background: linear-gradient(120deg, #f8eba4, #f0e297);
   font-family: Arial, sans-serif;
 }
 
@@ -17,7 +17,7 @@
 }
 
 .login-box h2 {
-  color: #2e7d32;
+  color: #665020;
   margin-bottom: 5px;
 }
 
@@ -47,7 +47,7 @@ button {
   width: 100%;
   padding: 10px;
   border: none;
-  background: #4caf50;
+  background: #e9e0ae;
   color: white;
   font-size: 16px;
   border-radius: 5px;
@@ -55,5 +55,5 @@ button {
 }
 
 button:hover {
-  background: #388e3c;
+  background: #f7eaa2;
 }

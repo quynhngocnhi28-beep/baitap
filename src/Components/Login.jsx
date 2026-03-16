@@ -2,19 +2,29 @@ import React, { useState } from "react";
 import "./Login.css";
 
 function Login({ goToRegister, goToForgot }) {
-
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const [errors, setErrors] = useState({});
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (username === "" || password === "") {
-      alert("Vui lòng nhập đầy đủ thông tin!");
-      return;
+    let newErrors = {};
+
+    if (!email) {
+      newErrors.email = "Vui lòng nhập email";
     }
 
-    alert("Đăng nhập thành công!");
+    if (!password) {
+      newErrors.password = "Vui lòng nhập mật khẩu";
+    }
+
+    setErrors(newErrors);
+
+    if (Object.keys(newErrors).length === 0) {
+      alert("Đăng nhập thành công!");
+    }
   };
 
   return (
@@ -28,19 +38,21 @@ function Login({ goToRegister, goToForgot }) {
             <input
               type="text"
               placeholder="Nhập email"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
+            {errors.email && <p className="error">{errors.email}</p>}
           </div>
 
           <div className="input-group">
             <label>Mật khẩu</label>
             <input
               type="password"
-              placeholder="Nhập password"
+              placeholder="Nhập mật khẩu"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
+            {errors.password && <p className="error">{errors.password}</p>}
           </div>
 
           <p className="switch">

@@ -1,46 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Login.css";
 
 function Login() {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    if (username === "" || password === "") {
-      alert("Vui lòng nhập đầy đủ thông tin!");
-      return;
-    }
-
-    alert("Đăng nhập thành công!");
-  };
-
   return (
     <div className="login-page">
       <div className="login-box">
-        <h2>Quản Lý Bán Hàng</h2>
-        <p>Siêu Thị Mini</p>
+        <h2>🛒 Quản Lý Bán Hàng</h2>
+        <p>Siêu thị mini</p>
 
-        <form onSubmit={handleSubmit}>
+        <form>
           <div className="input-group">
             <label>Tên đăng nhập</label>
-            <input
-              type="text"
-              placeholder="Nhập username"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-            />
+            <input type="text" placeholder="Nhập username" />
           </div>
 
           <div className="input-group">
             <label>Mật khẩu</label>
-            <input
-              type="password"
-              placeholder="Nhập password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
+            <input type="password" placeholder="Nhập password" />
           </div>
 
           <button type="submit">Đăng nhập</button>

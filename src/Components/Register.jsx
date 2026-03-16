@@ -2,20 +2,36 @@ import React, { useState } from "react";
 import "./Register.css";
 
 function Register({ goToLogin }) {
+
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const [errors, setErrors] = useState({});
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!username || !email || !password) {
-      alert("Vui lòng nhập đầy đủ thông tin!");
-      return;
+    let newErrors = {};
+
+    if (!username) {
+      newErrors.username = "Vui lòng nhập tên đăng nhập";
     }
 
-    alert("Đăng ký thành công!");
-    goToLogin();
+    if (!email) {
+      newErrors.email = "Vui lòng nhập email";
+    }
+
+    if (!password) {
+      newErrors.password = "Vui lòng nhập mật khẩu";
+    }
+
+    setErrors(newErrors);
+
+    if (Object.keys(newErrors).length === 0) {
+      alert("Đăng ký thành công!");
+      goToLogin();
+    }
   };
 
   return (
@@ -32,6 +48,7 @@ function Register({ goToLogin }) {
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
+            {errors.username && <p className="error">{errors.username}</p>}
           </div>
 
           <div className="input-group">
@@ -42,6 +59,7 @@ function Register({ goToLogin }) {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
+            {errors.email && <p className="error">{errors.email}</p>}
           </div>
 
           <div className="input-group">
@@ -52,13 +70,14 @@ function Register({ goToLogin }) {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
+            {errors.password && <p className="error">{errors.password}</p>}
           </div>
 
           <button type="submit">Đăng ký</button>
         </form>
 
         <p className="switch">
-          Đã có tài khoản? <span onClick={goToLogin}>Đăng nhập</span>
+          Đã có tài khoản <span onClick={goToLogin}>Đăng nhập</span>
         </p>
       </div>
     </div>

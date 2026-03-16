@@ -16,6 +16,16 @@
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
 
+.register-box h2 {
+  color: #665020;
+  margin-bottom: 5px;
+}
+
+.register-box p {
+  color: gray;
+  margin-bottom: 20px;
+}
+
 .input-group {
     text-align: left;
     margin-bottom: 15px;
@@ -54,7 +64,3 @@ button:hover {
     font-weight: bold;
 }
 
-.h2 {
-    color: #665020;
-    margin-bottom: 5px;
-}

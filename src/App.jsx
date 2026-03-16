@@ -3,10 +3,14 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
-import { Components } from 'react'
+import Login from "./components/Login";
 
 function App() {
-  return <Components Login/>
+  return (
+    <div>
+      <Login />
+    </div>
+  );
 }
 
-export default App
+export default App;

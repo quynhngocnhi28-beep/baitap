@@ -26,7 +26,7 @@ function Login({ goToRegister }) {
                         <label>Email</label>
                         <input
                             type="text"
-                            placeholder="Nhập username"
+                            placeholder="Nhập email"
                             value={username}
                             onChange={(e) => setUsername(e.target.value)}
                         />

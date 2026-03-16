@@ -17,13 +17,13 @@
 }
 
 .register-box h2 {
-  color: #665020;
-  margin-bottom: 5px;
+    color: #665020;
+    margin-bottom: 5px;
 }
 
 .register-box p {
-  color: gray;
-  margin-bottom: 20px;
+    color: gray;
+    margin-bottom: 20px;
 }
 
 .input-group {
@@ -63,4 +63,3 @@ button:hover {
     cursor: pointer;
     font-weight: bold;
 }
-

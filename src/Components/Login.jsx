@@ -42,6 +42,11 @@ function Login({ goToRegister }) {
                         />
                     </div>
 
+
+                    <p className="forgot">
+                        <span onClick={goToForgot}>Quên mật khẩu?</span>
+                    </p>
+
                     <button type="submit">Đăng nhập</button>
                 </form>
 

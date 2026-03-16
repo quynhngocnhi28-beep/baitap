@@ -36,8 +36,8 @@ function Login({ goToRegister, goToForgot }) {
   };
 
   return (
-    <div className="login-page">
-      <div className="login-box">
+    <div className="auth-page">
+      <div className="auth-box">
 
         <h2>Đăng nhập</h2>
 

@@ -43,13 +43,15 @@ function Login({ goToRegister }) {
                     </div>
 
 
-                    <p className="forgot">
+                    <p className="switch">
                         <span onClick={goToForgot}>Quên mật khẩu?</span>
                     </p>
 
-                    <button type="submit">Đăng nhập</button>
+                    <button type="submit" className="auth-btn">
+                        Đăng nhập
+                    </button>
                 </form>
-
+                
                 <p className="switch">
                     Chưa có tài khoản?{" "}
                     <span onClick={goToRegister}>Đăng nhập</span>

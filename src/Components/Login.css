@@ -13,26 +13,16 @@
   width: 320px;
   border-radius: 10px;
   text-align: center;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
 }
 
 .login-box h2 {
   color: #665020;
-  margin-bottom: 5px;
-}
-
-.login-box p {
-  color: gray;
-  margin-bottom: 20px;
 }
 
 .input-group {
   text-align: left;
   margin-bottom: 15px;
-}
-
-.input-group label {
-  font-size: 14px;
 }
 
 .input-group input {
@@ -46,10 +36,8 @@
 button {
   width: 100%;
   padding: 10px;
-  border: none;
   background: #e9e0ae;
-  color: white;
-  font-size: 16px;
+  border: none;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -65,14 +53,6 @@ button:hover {
 .switch span {
   cursor: pointer;
   font-weight: bold;
-}
-
-.input-group input {
-  width: 100%;
-  padding: 8px;
-  margin-top: 5px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
 }
 
 .error {

@@ -5,24 +5,32 @@ function Login({ goToRegister, goToForgot }) {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [errors, setErrors] = useState({});
+
+  const [errors, setErrors] = useState({
+    email: "",
+    password: ""
+  });
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    let newErrors = {};
+    let emailError = "";
+    let passwordError = "";
 
-    if (!email) {
-      newErrors.email = "Vui lòng nhập email";
+    if (email === "") {
+      emailError = "Vui lòng nhập email";
     }
 
-    if (!password) {
-      newErrors.password = "Vui lòng nhập mật khẩu";
+    if (password === "") {
+      passwordError = "Vui lòng nhập mật khẩu";
     }
 
-    setErrors(newErrors);
+    setErrors({
+      email: emailError,
+      password: passwordError
+    });
 
-    if (Object.keys(newErrors).length === 0) {
+    if (emailError === "" && passwordError === "") {
       alert("Đăng nhập thành công!");
     }
   };
@@ -30,9 +38,11 @@ function Login({ goToRegister, goToForgot }) {
   return (
     <div className="login-page">
       <div className="login-box">
+
         <h2>Đăng nhập</h2>
 
         <form onSubmit={handleSubmit}>
+
           <div className="input-group">
             <label>Email</label>
             <input
@@ -60,12 +70,14 @@ function Login({ goToRegister, goToForgot }) {
           </p>
 
           <button type="submit">Đăng nhập</button>
+
         </form>
 
         <p className="switch">
           Chưa có tài khoản?{" "}
           <span onClick={goToRegister}>Đăng ký</span>
         </p>
+
       </div>
     </div>
   );

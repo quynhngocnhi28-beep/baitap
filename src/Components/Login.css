@@ -57,3 +57,13 @@ button {
 button:hover {
   background: #dfd49a;
 }
+
+.switch {
+  margin-top: 15px;
+}
+
+.switch span {
+  background: #e4d693;
+  cursor: pointer;
+  font-weight: bold;
+}

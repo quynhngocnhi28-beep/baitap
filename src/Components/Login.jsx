@@ -45,9 +45,9 @@ function Login({ goToRegister }) {
                     <button type="submit">Đăng nhập</button>
                 </form>
 
-                <p>
+                <p className="switch">
                     Chưa có tài khoản?{" "}
-                    <span onClick={goToRegister}>Đăng ký</span>
+                    <span onClick={goToRegister}>Đăng nhập</span>
                 </p>
             </div>
         </div>
